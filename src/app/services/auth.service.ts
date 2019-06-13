@@ -116,7 +116,7 @@ signOut(): void {
     this.router.navigate(['/'])
   }
 private updateUserData(): void {
-    const path = 'users/${this.currentUserId}'; 
+    const path = "users"; 
     // Endpoint on firebase
     const userRef: AngularFireObject<any> = this.db.object(path);
 const data = {
