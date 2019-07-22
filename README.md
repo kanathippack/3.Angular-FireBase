@@ -1,2 +1,2 @@
-# AngularFireBase
+# Angular-FireBase
 
