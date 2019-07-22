@@ -20,12 +20,12 @@ ngOnInit() {
  this.buildForm();
  }
 buildForm(): void {
- this.loginForm = new FormGroup({
- email: new FormControl('', [
- Validators.required,
- Validators.email
- ]),
- password: new FormControl('', [
+         this.loginForm = new FormGroup({
+         email: new FormControl('', [
+        Validators.required,
+          Validators.email
+    ]),
+    password: new FormControl('', [
  Validators.pattern('^(?=.*[0–9])(?=.*[a-zA-Z])([a-zA-Z0–9]+)$'),
  Validators.minLength(6),
  Validators.maxLength(25)
@@ -35,4 +35,11 @@ buildForm(): void {
 login(): void {
  this.auth.emailLogin(this.loginForm.value.email, this.loginForm.value.password)
  }
+ tryGoogleLogin(){
+  this.auth.doGoogleLogin()
+  .then(res => {
+    this.router.navigate(['/profile']);
+  })
+}
+ 
 }
