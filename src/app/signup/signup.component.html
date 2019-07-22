@@ -1,19 +1,22 @@
-<div class="row justify-content-center">
+<div align="center">
+
+
+<div class="row justify-content-center" style="padding-left:40px;padding-right:40px;margin-top:130px">
   <div class="col-md-6">
     <div class="card">
-      <div class="card-header text-center text-white bg-dark">
-          สมัครสมาชิก
+      <div  class="card-header text-center text-white" style="background-color: #3fc380">
+         <h1>Signup</h1> 
       </div>
     <div class="card-body">
   <form [formGroup]="userForm" (ngSubmit)="signup()">
     <div class="form-group row">
-      <label class="col-sm-3 col-form-label">Email</label>
+      <label class="col-sm-3 col-form-label"><h5>Email</h5></label>
         <div class="col-sm-9">
         <input type="email" formControlName="emailSignup" class="form-control">
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-sm-3 col-form-label">Password</label>
+    <label class="col-sm-3 col-form-label"><h5>Password</h5></label>
     <div class="col-sm-9">
     <input type="password" formControlName="passwordSignup" class="form-control">
    </div>
@@ -21,13 +24,13 @@
   <div class="row">
     <div class="col-6 text-left">
       <a class="text-muted" [routerLink]="['/login']">
-       เข้าสู่ระบบ
+       Login
       </a>
     </div>
-  <div class="col-6 text-right">
+  <div align="center">
    <button type="submit" class="btn btn-primary">
    <i class="fa fa-lock" aria-hidden="true"></i>
-      สมัครสมาชิก
+      Enter
      </button>
    </div>
   </div>
@@ -36,3 +39,6 @@
   </div>
   </div>
  </div>
+
+
+</div>

@@ -1,19 +1,21 @@
-<div class="row justify-content-center">
+<div align="center">
+
+<div class="row justify-content-center" style="padding-left:40px;padding-right:40px;margin-top:130px">
   <div class="col-md-6">
     <div class="card">
       <div class="card-header text-center text-white bg-dark">
-        เข้าสู่ระบบ
+        <h1>Login</h1>
       </div>
       <div class="card-body">
         <form [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="form-group row">
-            <label class="col-sm-3 col-form-label">Email</label>
+            <label class="col-sm-3 col-form-label"><h5>Email</h5></label>
             <div class="col-sm-9">
               <input type="email" formControlName="email" class="form-control">
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-sm-3 col-form-label">Password</label>
+            <label class="col-sm-3 col-form-label"><h5>Password</h5></label>
             <div class="col-sm-9">
               <input type="password" formControlName="password" class="form-control">
             </div>
@@ -21,18 +23,47 @@
           <div class="row">
             <div class="col-6 text-left">
               <a class="text-muted" [routerLink]="['/signup']">
-                สมัครสมาชิกใหม่ ?
+                Signup ?
               </a>
             </div>
-            <div class="col-6 text-right">
+            <div align="center">
               <button type="submit" class="btn btn-primary">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                เข้าสู่ระบบ
+                Enter
               </button>
+              <br>
+              <button type="button" class="btn btn-danger btn-block" (click)="tryGoogleLogin()">Login with Google</button>
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
+</div>
+
+
+<!--
+<mat-card class="example-card">
+    <mat-card-header>
+        
+        <mat-card-title>Login</mat-card-title>
+        <mat-icon>person</mat-icon></mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+-->
+
+
 </div>
